@@ -15,3 +15,13 @@ I learned about three main time management and productivity ideas.  First, was t
 5.  pwd: print working directory; ls: list directory/file; mv: move/rename a file/directory; cd: change to a different directory; ../: move to the previous directory (one above the current directory); touch: create an empty text file; mkdir: create a new directory; less: view a text file in the Terminal; rmdir: remove a directory; rm: remove a file; help: find information about a command.
 
 # 1.4 Forking and Cloning Reflection
+
+How to Create a New Repo: 1) Log in to your GitHub account.  2) Select the "+" sign at the top right to create a new repository.  3)  On "Create a new repository" page, type in the repo name, select public or private, and other specifications.  Then, click create repo!
+
+How to Fork a Repo: 1)  Navigate to the repository you would like to have copied over to your GitHub account.  You will need to fork the repo over from the original source of the data.  2)  Click the Fork button in the top right and select your GitHub account.  The repo will then be forked into your GitHub and ready to work on!
+
+How to Clone a Repo:  1) Log in to your GitHub account and click on the repo you would like to clone onto your local machine.  This will bring you to the specific page of that repository.  2)  In the middle of the screen, copy the HTTPS link (this will connect the repo in your GitHub account to your local machine).  3)  Navigate to your Terminal and go to the directory where you would like to clone in this repository.  4)  Once in the proper directory, type git clone <paste URL that was copied from GitHub>.  5)  After executing, you will be able to see that the repo has been cloned onto your computer.
+
+A programmer would choose to fork a repository when they would like to work on code that has already been written by another user.  This allows the programmer to copy over a working version of the code to their local account and make edits and changes without affecting the master branch of the code.  Forking over a repository is much quicker than writing a new repository, especially when the code base has already been completed.
+
+I did not have any major struggles setting up git and GitHub since I have worked with both applications in the past.  This allowed me to feel more comfortable moving through the steps and continue advancing my knowledge and comfort level with using both git and GitHub.  One thing I need to be cautious of when cloning over a repository from my GitHub account is to ensure that I am in the proper directory in my Terminal.  I learned that it is important to have very specific directories so you can easily navigate to your various repositories.
