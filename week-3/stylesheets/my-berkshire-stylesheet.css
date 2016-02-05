@@ -1,0 +1,53 @@
+
+body {
+  color: #000080;
+}
+
+a {
+  color: #800080;
+}
+
+a:visited {
+  color: #ff0000;
+}
+
+html {
+  background-color: #ffffff;
+}
+
+.left-column {
+  position: relative;
+  display: block;
+  left: 5%;
+  width: 40%;
+
+}
+
+.right-column {
+  position: relative;
+  display: block;
+  left: 55%;
+  width: 40%;
+}
+
+.geico {
+  position: relative;
+  text-align: center;
+  vertical-align: center;
+}
+
+.disclaimer{
+  position: relative;
+}
+
+.bh:first-letter {
+font-size: 140%;
+}
+
+.letterhead {
+  position: relative;
+  text-align: center;
+  font-weight: bold;
+}
+
+.hline { width:100%; height:1px; background: #fff }
