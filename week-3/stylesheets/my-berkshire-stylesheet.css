@@ -16,28 +16,37 @@ html {
 }
 
 .left-column {
-  position: relative;
+  position: static;
   display: block;
-  left: 5%;
   width: 40%;
-
 }
 
 .right-column {
-  position: relative;
+  position: absolute;
   display: block;
-  left: 55%;
-  width: 40%;
+  clear: right;
+  top: 110px;
+  left: 45%;
+  padding-top: 17px;
 }
 
 .geico {
   position: relative;
   text-align: center;
   vertical-align: center;
+  border-top-style: solid;
+  border-top-color: black;
+  border-top-width: thin;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .disclaimer{
   position: relative;
+  border-top-style: solid;
+  border-top-color: black;
+  border-top-width: thin;
+  padding-top: 10px;
 }
 
 .bh:first-letter {
@@ -48,6 +57,38 @@ font-size: 140%;
   position: relative;
   text-align: center;
   font-weight: bold;
+  border-bottom-style: solid;
+  border-bottom-color: black;
+  border-bottom-width: thin;
+  padding-bottom: 10px;
 }
 
-.hline { width:100%; height:1px; background: #fff }
+.h_line {
+  width:100%;
+  height:1px;
+}
+
+/*
+Reflection
+
+What is important to know when linking an external file (like a stylesheet) to an HTML file?
+
+It is important to have all elements of the link including in the HTML file. This is type, rel, and the href link to the CSS file. If the CSS file is not in the same repo as the HTML file, you will need to type in the relative path.
+
+What tricks did you use to help you with positioning? How hard was it to get the site as you wanted it?
+
+To help with the positioning, we tested out the different options and then chose which one worked out best. We tried to keep things as simple as possible, using static when appropriate and relative. We were having difficulty when using the absolute and fixed positioning. It was difficult for us to get the site as we wanted it because there are multiple options for each type of positioning and we are still in the learning stage.
+
+What CSS did you use to modify the element style (like size, color, etc.)
+
+I used color, background-color, width, height, position, text-align, border, padding, font-weight, vertical-align, and display.
+
+Did you modify the HTML to include classes or ids? If so, which did you choose and why? If you didn't, how would you know which one to add to your HTML?
+
+Yes, we modified the HTML to include classes to better organize and style our code. Classes are helpful because it allows you to style multiple sections of code at the same time. If you plan on adding more code in the future, you can easily reference a class that has already been estabilished so that the code will be styled the same.
+
+When you compared your site to the actual code base, which do you think had cleaner code that followed best practices and why?
+
+I think the Berkshire code base and the code base my partner and I wrote both have pros and cons. The Berkshire site broke down the links into a table, which looks to be easier to format instead of breaking them into two separate classes (my code base.) For the remaining code, my partner and I added classes for the different sections, which seems to be more helpful when working on the CSS portion. Berkshire kept the remaining code in <p> tags and did not provide additional semantic specificity.
+
+
