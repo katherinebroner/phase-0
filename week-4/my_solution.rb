@@ -1,6 +1,6 @@
 # Calculate a Grade
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge with Camila Crawford.
 
 
 # Your Solution Below
