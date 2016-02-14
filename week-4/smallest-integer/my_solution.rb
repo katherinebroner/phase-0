@@ -12,9 +12,7 @@
 
 # Your Solution Below
 def smallest_integer(list_of_nums)
-  for num in list_of_nums
-    return list_of_nums.min
-  end
+  return list_of_nums.min
   if list_of_nums == []
     return nil
   end
