@@ -27,3 +27,30 @@ end
 
 # Notes
 # if statements first to go through potential outcomes. Convert range into an array using the .to_a function. Use select method to choose all items in the array that fall within the range. Then, count those items in the array. This method leaves out numbers that fall out of the range specified.
+
+=begin
+  Additional Ways to Solve Problem (based on Peer Reviews):
+
+def count_between(list_of_integers, lower_bound, upper_bound)
+  count=0
+  list_of_integers.each do |i|
+    if i >= lower_bound && i <= upper_bound
+      count=count+1
+    end
+  end
+  return count
+end
+
+def count_between(list_of_integers, lower_bound, upper_bound)
+  r = lower_bound..upper_bound
+  total = 0
+  list_of_integers.each do |num|
+    if r.cover?(num)
+      total = total + 1
+    end
+  end
+  return total
+end
+
+end
+

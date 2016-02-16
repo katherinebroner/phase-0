@@ -17,3 +17,18 @@ def largest_integer(list_of_nums)
     return nil
   end
 end
+
+=begin
+
+  Additional Ways to Solve Problem (based on Peer Reviews):
+def largest_integer(list_of_nums)
+  largest=list_of_nums[0]
+  list_of_nums.each do |int|
+    if int > largest
+      largest=int
+    end
+  end
+  return largest
+end
+
+end
