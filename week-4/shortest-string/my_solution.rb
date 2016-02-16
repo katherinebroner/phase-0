@@ -17,3 +17,18 @@ def shortest_string(list_of_words)
     return nil
   end
 end
+
+=begin
+  Additional Ways to Solve Problem (based on Peer Reviews):
+
+def shortest_string(list_of_words)
+  shortest_string=list_of_words[0]
+  list_of_words.each do |i|
+    if i.length < shortest_string.length
+      shortest_string = i
+    end
+  end
+  return shortest_string
+end
+
+end

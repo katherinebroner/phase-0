@@ -18,3 +18,18 @@ def longest_string(list_of_words)
     return nil
   end
 end
+
+=begin
+  Additional Ways to Solve Problem (based on Peer Reviews):
+
+def longest_string(list_of_words)
+  longest=list_of_words[0]
+  list_of_words.each do |word|
+    if word.length>longest.length
+      longest=word
+    end
+  end
+  return longest
+end
+
+end
