@@ -34,7 +34,7 @@
   #fill in the outline here
 
 # Initial Solution
-
+=begin
 class BingoBoard
   attr_reader :board
 
@@ -59,7 +59,60 @@ class BingoBoard
     end
   end
 end
+=end
 
+class BingoBoard
+
+attr_reader :call_letter
+attr_reader :call_num
+
+def initialize(board)
+  @board = board
+end
+
+def call
+  @call_letter = ["B","I","N","G","O"].sample
+  #@call_letter = "B"
+  @call_num = rand(100)
+  #@call_num = 75
+  p @call_letter + @call_num.to_s
+end
+
+def check
+  @board.each do |sub_array|
+    if @call_letter == "B"
+      if sub_array[0] == @call_num
+        sub_array[0] = "X"
+      end
+    elsif @call_letter == "I"
+      if sub_array[1] == @call_num
+        sub_array[1] = "X"
+      end
+    elsif @call_letter == "N"
+      if sub_array[2] == @call_num
+        sub_array[2] = "X"
+      end
+    elsif @call_letter == "G"
+      if sub_array[3] == @call_num
+        sub_array[3] = "X"
+      end
+    else @call_letter[4] == "O"
+      if sub_array[4] == @call_num
+        sub_array[4] = "X"
+      end
+    end
+  end
+end
+
+def display
+  puts " B   I   N   G   O"
+  puts "------------------"
+  @board.each do |row|
+    p row
+  end
+end
+
+end
 # Refactored Solution
 
 
@@ -72,7 +125,9 @@ board = [[47, 44, 71, 8, 88],
         [75, 70, 54, 80, 83]]
 
 new_game = BingoBoard.new(board)
-new_game.play
+new_game.call
+new_game.check
+new_game.display
 
 
 #Reflection
