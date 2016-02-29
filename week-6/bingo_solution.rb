@@ -32,6 +32,9 @@
 
 # Display the board to the console (prettily)
   #fill in the outline here
+  #print out "BINGO"
+  #print out dashed line to separate board
+  #iterate through the board to print each row separately
 
 # Initial Solution
 =begin
@@ -185,19 +188,20 @@ new_game.display
 #Reflection
 =begin
 
-How difficult was pseudocoding this challenge? What do you think of your pseudocoding style?
+How difficult was pseudocoding this challenge? What do you think of your pseudocoding style?  I felt that the pseudocoding this challenge was fairly straightforward, and I found it easy to break down the problems into separate sections and steps. I like my pseudocoding style because it is detailed, but would like to number out the steps in the future so it is easier to follow.
 
-What are the benefits of using a class for this challenge?
+What are the benefits of using a class for this challenge?  Using a class for this channel was very beneficial because it will allow you to change the input (the board) without affecting how the code runs.
 
-How can you access coordinates in a nested array?
 
-What methods did you use to access and modify the array?
+How can you access coordinates in a nested array?  To access coordinates in a nested array, you must first specify which nested array you would like to go into based on the index. To access the individual items in the nested array you will then specify the index of that particular item. When accessing nested arrays, you start with the outermost array and work your way in.
 
-Give an example of a new method you learned while reviewing the Ruby docs. Based on what you see in the docs, what purpose does it serve, and how is it called?
+What methods did you use to access and modify the array?  To modify the array, I used the .each method to iterate through the array and access particular elements within the nested array.  I used the if loop within the each method to specify which index in the array to look at depending on the letter variable that was selected.
 
-How did you determine what should be an instance variable versus a local variable?
+Give an example of a new method you learned while reviewing the Ruby docs. Based on what you see in the docs, what purpose does it serve, and how is it called?  When reviewing the Ruby docs, I learned about the method .sample, which I prefer to use over rand when selecting a variable from a list. The method allows you to pick a random element from the list, or you can specify how many random elements you would like the method to pick. It is called by adding .sample to the end of an array.
 
-What do you feel is most improved in your refactored solution?
+How did you determine what should be an instance variable versus a local variable?  I chose my instance variables based on what I wanted to use within particular instances of a class. In addition to the input @board, I added @call_letter and @call_num as instance variables because I wanted to use them within particular instance methods. A local variable would be chosen if it was specific to only one instance method and should not be used elsewhere in the code.
+
+What do you feel is most improved in your refactored solution? Compared to my very first solution (where I was just trying to iterate through numbers), I saw the most improvement in being able to recognize the index pattern for the letters and apply it to the bingo board. After I adjusted my initial solution that worked, switching to the case method in refactoring helped to make the code more concise and less repetitive because because I was working with a specific number of inputs.
 
 
 =end
