@@ -14,8 +14,7 @@ function Calculate(array) {
   this.mean = function() {
     var count = this.array.length;
     var result = this.sum()/count;
-    console.log(this.sum());
-    console.log(result);
+    return result;
   }
 
   this.median = function() {
@@ -30,15 +29,17 @@ function Calculate(array) {
         var secondMiddleIndex = count/2;
         result = (this.array[firstMiddleIndex]+this.array[secondMiddleIndex])/2;
     }
-    console.log(result);
+    return result;
   }
 }
 
+/*
 var numArray = new Calculate([1, 2, 3, 4]);
 console.log(numArray);
 numArray.sum();
 numArray.mean();
 numArray.median();
+*/
 
 // User Story
 /* As a user, I want to create a list of numbers. With this list of numbers, I would like to know the sum (would add the numbers together) mean (would find the average of the numbers), and median (would find the number that is halfway between the list once the numbers are sorted from smallest to largest).
