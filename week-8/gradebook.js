@@ -22,7 +22,7 @@ var scores = [ [80, 70, 70, 100],
 
 // __________________________________________
 // Write your code below.
-
+/*
 var gradebook = {}
 
 for (var i = 0; i < scores.length; i++) {
@@ -49,8 +49,27 @@ var average = function(numbers) {
    }
   return sum / count;
 }
+*/
 
-/*
+// __________________________________________
+// Refactored Solution
+
+var gradebook = {}
+
+for (var i = 0; i < scores.length; i++) {
+  gradebook[students[i]] = {
+      testScores: scores[i]
+  }
+}
+
+gradebook.addScore = function(name, score) {
+  gradebook[name].testScores.push(score);
+}
+
+gradebook.getAverage = function(name) {
+  return average(gradebook[name].testScores)
+}
+
 var average = function(numbers) {
   var sum = 0;
 
@@ -59,15 +78,6 @@ var average = function(numbers) {
   }
   return sum / numbers.length;
 }
-*/
-
-
-
-
-
-// __________________________________________
-// Refactored Solution
-
 
 
 
@@ -77,8 +87,14 @@ var average = function(numbers) {
 
 // __________________________________________
 // Reflect
+/*
+What did you learn about adding functions to objects?  When adding functions to objects, I learned that you need to call the object, followed by a period and the name of the function.  This pulls in the object as well as naming the function.
 
+How did you iterate over nested arrays in JavaScript?  To iterate over nested arrays, you would use multiple for loops.
 
+Were there any new methods you were able to incorporate? If so, what were they and how did they work?  We did not use any new methods, but did use the push and length method.  Another new thing I learned was adding properties to objects.
+
+*/
 
 
 
