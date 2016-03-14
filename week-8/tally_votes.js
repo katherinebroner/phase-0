@@ -1,7 +1,7 @@
 // Tally Votes in JavaScript Pairing Challenge.
 
-// I worked on this challenge with:
-// This challenge took me [#] hours.
+// I worked on this challenge with Ryan Wilkins
+// This challenge took me [3.5] hours.
 
 // These are the votes cast by each student. Do not alter these objects here.
 var votes = {
@@ -64,19 +64,28 @@ var officers = {
 
 // Pseudocode
 
+/* Tally Votes: 1. Look at each voter within the votes object. 2. Look at each position within the voteCount object. 3. If a person is voted for more than once, continue adding one each time the vote is seen, unless, only count one vote for the person.
+*/
+
+/*
+1. Find Officers: Once vote count has been updated, look at each position in vote count. 2. Set up a way to check the highest number of votes and set initial variable to 0. 3. Set a variable to represent the candidates.  4. For each person within the group of candidates, if the persons number of votes is greater than the greatest value, that number becomes the new greatest value. 5. Continue checking until the candidate with the highest number of votes is found and assign this person to the officer position.
+*/
+
+
 
 
 // __________________________________________
 // Initial Solution
 
+
 for (var voter in votes) {
   for (var positions in voteCount) {
-    if (voteCount[positions].hasOwnProperty(votes[voter][positions])) {
-     voteCount[positions][votes[voter][positions]]++;
-   }
-   else {
+    if (voteCount[positions][votes[voter][positions]]) {
+      voteCount[positions][votes[voter][positions]]++;
+    }
+    else {
       voteCount[positions][votes[voter][positions]] = 1;
-   }
+    }
   }
 };
 
@@ -92,21 +101,29 @@ for (var positions in voteCount) {
 }
 
 
+console.log(voteCount)
+console.log(officers)
 
 
 
 // __________________________________________
 // Refactored Solution
 
-
+// Could not find additional ways to refactor solution
 
 
 
 
 // __________________________________________
 // Reflection
+/*
+  What did you learn about iterating over nested objects in JavaScript? I learned that when iterating over nested objects, you need to move from the outermost item inward, until you have reached the desired element in the object. I also found it helpful to console.log throughout to see where we were in the nested object.
 
+  Were you able to find useful methods to help you with this?  To iterate over the object, we used for (item in object) to continue moving through the object. Once we were at the desired position, we used an if statement to test out our condition.
 
+  What concepts were solidified in the process of working through this challenge?  I feel more comfortable with the concept that you must start with the outermost element and continue working your way inwards.  Since theis challenge had so many levels of nested arrays, I found it helpul to console.log throughout and I plan to speak with a guide on this challenge to ensure I understand the concepts fully.
+
+*/
 
 
 
