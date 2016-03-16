@@ -1,6 +1,6 @@
 # Cipher Challenge
 
-# I worked on this challenge [with Ryan Dempset]
+# I worked on this challenge [with Ryan Dempsey]
 # I spent [2] hours on this challenge.
 
 # 1. Solution
